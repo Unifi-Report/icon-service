@@ -18,8 +18,9 @@ if ($ExplorerIcons_oep4->msg == 'SUCCESS'){
 
         if ($ExplorerIcons_oep8->msg == 'SUCCESS'){
             $image = file_get_contents( $ExplorerIcons_oep8->result->logo);
-
-
+        }
+        else{
+            $image = file_get_contents('icons/ontology/ont.png');
         }
 
     }
