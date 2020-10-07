@@ -8,10 +8,11 @@ $TronscanIcons = json_decode($json_TronscanIcons);
 $tronscanIconData = $TronscanIcons->data;
 
 
-if ($tronscanIconData[0]->icon_url == 'https://coin.top/production/upload/logo/default.png')){
-  $homepage = file_get_contents('https://raw.githubusercontent.com/BitGuildPlatform/dapps/master/tron/trc10/' . $selectedToken . '.png');
+if ($tronscanIconData[0]->imgUrl == 'https://coin.top/production/upload/logo/default.png')){
+  $image = file_get_contents('https://raw.githubusercontent.com/BitGuildPlatform/dapps/master/tron/trc10/' . $selectedToken . '.png');
 }else{
-  $homepage = file_get_contents( $tronscanIconData[0]->imgUrl);
+  $image = file_get_contents( $tronscanIconData[0]->imgUrl);
 }
 
-echo $homepage;
+
+echo $image;
