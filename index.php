@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col-12 py-5">
       <h3>TRC10</h3>
-      <form class="needs-validation" novalidate action="icon" method="get">
+      <form class="needs-validation" novalidate action="icon_trc10.php" method="get">
         <div class="row">
           <div class="input-group mb-3 pt-1 col-10">
 
