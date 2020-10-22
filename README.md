@@ -9,7 +9,7 @@ Ontology:
 ```
 Tron TRC10:
 ```text
-<img scr="https://icon-service.unifi.report/icon_trc10.php?token=1000001">
+<img scr="https://icon-service.unifi.report/icon_trc10?token=1000001">
 ```
 Tron TRC20:
 ```text
