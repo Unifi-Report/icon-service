@@ -31,7 +31,7 @@ if (file_exists($filename)) {
 			if ($ExplorerIcons_oep8->msg == 'SUCCESS') {
 				$image = file_get_contents($ExplorerIcons_oep8->result->logo);
 			} else {
-				$image = file_get_contents('icons/ontology/ont.png');
+				$image = file_get_contents('icons/ontology/ONT_blue.png');
 			}
 		}
 	}
