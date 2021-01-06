@@ -29,6 +29,9 @@ if ($smartContract):
   if ($BlockchainShort == 'ONE'){
     $image = file_get_contents('https://icon-service.unifi.report/icon_one?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'ONT'){
+    $image = file_get_contents('https://icon-service.unifi.report/icon_ont?token=' . $tokenAddress . '');
+  }
 endif;
 
 $blockchain = $_GET['blockchain'];
@@ -57,6 +60,9 @@ if ($blockchain):
   }
   if ($BlockchainShort == 'ONE'){
     $image = file_get_contents('https://icon-service.unifi.report/icon_one?token=' . $tokenAddress . '');
+  }
+  if ($BlockchainShort == 'ONT'){
+    $image = file_get_contents('https://icon-service.unifi.report/icon_ont?token=' . $tokenAddress . '');
   }
 
 endif;

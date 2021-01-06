@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 $json_unifiTron = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/tron');
 $unifiTron = json_decode($json_unifiTron);
 
-foreach ($unifiTron as $tron){
+foreach ($unifiTron as $tron) {
   $allTokenes[] = array(
     "name" => $tron->name,
     "tokenAddress" => $tron->tokenAddress,
@@ -21,7 +21,7 @@ foreach ($unifiTron as $tron){
 $json_unifiBinance = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/binance');
 $unifiBinance = json_decode($json_unifiBinance);
 
-foreach ($unifiBinance as $binance){
+foreach ($unifiBinance as $binance) {
   $allTokenes[] = array(
     "name" => $binance->name,
     "tokenAddress" => $binance->tokenAddress,
@@ -35,7 +35,7 @@ foreach ($unifiBinance as $binance){
 $json_unifiIcon = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/icon');
 $unifiIcon = json_decode($json_unifiIcon);
 
-foreach ($unifiIcon as $icon){
+foreach ($unifiIcon as $icon) {
   $allTokenes[] = array(
     "name" => $icon->name,
     "tokenAddress" => $icon->tokenAddress,
@@ -49,7 +49,7 @@ foreach ($unifiIcon as $icon){
 $json_unifiEthereum = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/ethereum');
 $unifiEthereum = json_decode($json_unifiEthereum);
 
-foreach ($unifiEthereum as $ethereum){
+foreach ($unifiEthereum as $ethereum) {
   $allTokenes[] = array(
     "name" => $ethereum->name,
     "tokenAddress" => $ethereum->tokenAddress,
@@ -63,7 +63,7 @@ foreach ($unifiEthereum as $ethereum){
 $json_unifiOntology = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/ontology');
 $unifiOntology = json_decode($json_unifiOntology);
 
-foreach ($unifiOntology as $ontology){
+foreach ($unifiOntology as $ontology) {
   $allTokenes[] = array(
     "name" => $ontology->name,
     "tokenAddress" => $ontology->tokenAddress,
@@ -77,7 +77,7 @@ foreach ($unifiOntology as $ontology){
 $json_unifiHarmony = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/harmony');
 $unifiHarmony = json_decode($json_unifiHarmony);
 
-foreach ($unifiHarmony as $harmony){
+foreach ($unifiHarmony as $harmony) {
   $allTokenes[] = array(
     "name" => $harmony->name,
     "tokenAddress" => $harmony->tokenAddress,
@@ -119,7 +119,34 @@ $allTokenes[] = array(
   "Blockchain" => 'Binance',
   "BlockchainShort" => 'BSC',
 );
-
+$allTokenes[] = array(
+  "name" => 'BURGER',
+  "tokenAddress" => 'BURGER',
+  "smartContract" => 'BNB',
+  "Blockchain" => 'Binance',
+  "BlockchainShort" => 'BSC',
+);
+$allTokenes[] = array(
+  "name" => 'ETH',
+  "tokenAddress" => 'ETH',
+  "smartContract" => 'ETH',
+  "Blockchain" => 'Ethereum',
+  "BlockchainShort" => 'ETH',
+);
+$allTokenes[] = array(
+  "name" => 'ONTd',
+  "tokenAddress" => 'ONT',
+  "smartContract" => 'ONT',
+  "Blockchain" => 'Ontology',
+  "BlockchainShort" => 'ONT',
+);
+$allTokenes[] = array(
+  "name" => 'ong',
+  "tokenAddress" => 'ONT',
+  "smartContract" => 'ONT',
+  "Blockchain" => 'Ontology',
+  "BlockchainShort" => 'ONT',
+);
 
 $fp = fopen('../data/tokens.json', 'w');
 fwrite($fp, json_encode($allTokenes, JSON_PRETTY_PRINT));
