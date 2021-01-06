@@ -68,6 +68,19 @@ foreach ($unifiOntology as $ontology){
   );
 }
 
+// Get unifi Harmony pairs
+$json_unifiHarmony = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/harmony');
+$unifiHarmony = json_decode($json_unifiHarmony);
+
+foreach ($unifiHarmony as $harmony){
+  $allTokenes[] = array(
+    "name" => $harmony->name,
+    "tokenAddress" => $harmony->tokenAddress,
+    "Blockchain" => 'Harmony',
+    "BlockchainShort" => 'ONE',
+  );
+}
+
 
 
 echo(json_encode($allTokenes, JSON_PRETTY_PRINT));
