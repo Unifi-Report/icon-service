@@ -87,6 +87,38 @@ foreach ($unifiHarmony as $harmony){
   );
 }
 
+// fixes
+$allTokenes[] = array(
+  "name" => 'UP',
+  "tokenAddress" => 'TJ93jQZibdB3sriHYb5nNwjgkPPAcFR7ty',
+  "smartContract" => 'TUxqQp2qXUx7hT2F6Zx4hy85n8o9L9bzM9',
+  "Blockchain" => 'Tron',
+  "BlockchainShort" => 'TRX',
+);
+
+$allTokenes[] = array(
+  "name" => 'BNB',
+  "tokenAddress" => 'BNB',
+  "smartContract" => 'BNB',
+  "Blockchain" => 'Binance',
+  "BlockchainShort" => 'BSC',
+);
+
+$allTokenes[] = array(
+  "name" => 'WBNB',
+  "tokenAddress" => 'BNB',
+  "smartContract" => 'BNB',
+  "Blockchain" => 'Binance',
+  "BlockchainShort" => 'BSC',
+);
+
+$allTokenes[] = array(
+  "name" => 'UP',
+  "tokenAddress" => '0xb4E8D978bFf48c2D8FA241C0F323F71C1457CA81',
+  "smartContract" => 'BNB',
+  "Blockchain" => 'Binance',
+  "BlockchainShort" => 'BSC',
+);
 
 
 $fp = fopen('../data/tokens.json', 'w');
