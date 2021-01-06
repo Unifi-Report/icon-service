@@ -11,6 +11,7 @@ foreach ($unifiTron as $tron){
   $allTokenes[] = array(
     "name" => $tron->name,
     "tokenAddress" => $tron->tokenAddress,
+    "smartContract" => $tron->contractAddress,
     "Blockchain" => 'Tron',
     "BlockchainShort" => 'TRX',
   );
@@ -24,8 +25,9 @@ foreach ($unifiBinance as $binance){
   $allTokenes[] = array(
     "name" => $binance->name,
     "tokenAddress" => $binance->tokenAddress,
+    "smartContract" => $binance->contractAddress,
     "Blockchain" => 'Binance',
-    "BlockchainShort" => 'BNB',
+    "BlockchainShort" => 'BSC',
   );
 }
 
@@ -37,6 +39,7 @@ foreach ($unifiIcon as $icon){
   $allTokenes[] = array(
     "name" => $icon->name,
     "tokenAddress" => $icon->tokenAddress,
+    "smartContract" => $icon->contractAddress,
     "Blockchain" => 'Icon',
     "BlockchainShort" => 'ICX',
   );
@@ -50,6 +53,7 @@ foreach ($unifiEthereum as $ethereum){
   $allTokenes[] = array(
     "name" => $ethereum->name,
     "tokenAddress" => $ethereum->tokenAddress,
+    "smartContract" => $ethereum->contractAddress,
     "Blockchain" => 'Ethereum',
     "BlockchainShort" => 'ETH',
   );
@@ -63,6 +67,7 @@ foreach ($unifiOntology as $ontology){
   $allTokenes[] = array(
     "name" => $ontology->name,
     "tokenAddress" => $ontology->tokenAddress,
+    "smartContract" => $ontology->contractAddress,
     "Blockchain" => 'Ontology',
     "BlockchainShort" => 'ONT',
   );
@@ -76,6 +81,7 @@ foreach ($unifiHarmony as $harmony){
   $allTokenes[] = array(
     "name" => $harmony->name,
     "tokenAddress" => $harmony->tokenAddress,
+    "smartContract" => $harmony->contractAddress,
     "Blockchain" => 'Harmony',
     "BlockchainShort" => 'ONE',
   );
@@ -83,4 +89,5 @@ foreach ($unifiHarmony as $harmony){
 
 
 
-echo(json_encode($allTokenes, JSON_PRETTY_PRINT));
+$fp = fopen('../data/tokens.json', 'w');
+fwrite($fp, json_encode($allTokenes, JSON_PRETTY_PRINT));
