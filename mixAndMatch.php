@@ -16,19 +16,19 @@ foreach ($unifiTokens as $unifiToken){
 
 
 if ($BlockchainShort == 'TRX'){
-  $image = file_get_contents('https://icon-service.unifi.report/icon_trc20?token=' . $tokenAddress . '.png');
+  $image = file_get_contents('https://icon-service.unifi.report/icon_trc20?token=' . $tokenAddress . '');
 }
 if ($BlockchainShort == 'ETH'){
-  $image = file_get_contents('https://icon-service.unifi.report/icon_eth?token=' . $tokenAddress . '.png');
+  $image = file_get_contents('https://icon-service.unifi.report/icon_eth?token=' . $tokenAddress . '');
 }
 if ($BlockchainShort =='ICX'){
-  $image = file_get_contents('https://icon-service.unifi.report/icon_icx?token=' . $tokenAddress . '.png');
+  $image = file_get_contents('https://icon-service.unifi.report/icon_icx?token=' . $tokenAddress . '');
 }
 if ($BlockchainShort == 'BSC'){
-  $image = file_get_contents('https://icon-service.unifi.report/icon_bsc?token=' . $tokenAddress . '.png');
+  $image = file_get_contents('https://icon-service.unifi.report/icon_bsc?token=' . $tokenAddress . '');
 }
 if ($BlockchainShort == 'ONE'){
-  $image = file_get_contents('https://icon-service.unifi.report/icon_one?token=' . $tokenAddress . '.png');
+  $image = file_get_contents('https://icon-service.unifi.report/icon_one?token=' . $tokenAddress . '');
 }
 
 
