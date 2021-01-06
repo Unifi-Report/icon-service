@@ -15,9 +15,21 @@ foreach ($unifiTokens as $unifiToken){
 }
 
 
-
-$image = file_get_contents('https://icon-service.unifi.report/icon_trc20?token=' . $tokenAddress . '.png');
-
+if ($BlockchainShort = 'TRX'){
+  $image = file_get_contents('https://icon-service.unifi.report/icon_trc20?token=' . $tokenAddress . '.png');
+}
+if ($BlockchainShort = 'ETH'){
+  $image = file_get_contents('https://icon-service.unifi.report/icon_eth?token=' . $tokenAddress . '.png');
+}
+if ($BlockchainShort = 'ICX'){
+  $image = file_get_contents('https://icon-service.unifi.report/icon_icx?token=' . $tokenAddress . '.png');
+}
+if ($BlockchainShort = 'BSC'){
+  $image = file_get_contents('https://icon-service.unifi.report/icon_bsc?token=' . $tokenAddress . '.png');
+}
+if ($BlockchainShort = 'ONE'){
+  $image = file_get_contents('https://icon-service.unifi.report/icon_one?token=' . $tokenAddress . '.png');
+}
 
 
 echo $image;
