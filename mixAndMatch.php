@@ -35,7 +35,7 @@ if ($smartContract):
 endif;
 
 $blockchain = $_GET['blockchain'];
-$tokenName = $_GET['tokenName'];
+$tokenName = strtoupper($_GET['tokenName']);
 if ($blockchain):
   foreach ($unifiTokens as $unifiToken){
     if ($blockchain == $unifiToken->Blockchain){
