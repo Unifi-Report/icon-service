@@ -66,6 +66,5 @@ if ($blockchain):
   }
 
 endif;
-
-
+  
 echo $image;
