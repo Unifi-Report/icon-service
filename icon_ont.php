@@ -1,15 +1,12 @@
 <?php
 $selectedToken = $_GET['token'];
 
-
 $filename = 'icons/ontology/' . $selectedToken . '.png';
 
 //print $tronscanIconData[0]->icon_url;
-
 if (file_exists($filename)) {
 
 	$image = file_get_contents('icons/ontology/' . $selectedToken . '.png');
-
 
 } else {
 
