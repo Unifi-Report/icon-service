@@ -71,6 +71,13 @@ foreach ($unifiOntology as $ontology) {
     "Blockchain" => 'Ontology',
     "BlockchainShort" => 'ONT',
   );
+  $allTokenes[] = array(
+    "name" => strtoupper($ontology->name),
+    "tokenAddress" => $ontology->tokenAddress,
+    "smartContract" => $ontology->contractAddress,
+    "Blockchain" => 'Ontology',
+    "BlockchainShort" => 'ONT',
+  );
 }
 
 // Get unifi Harmony pairs
