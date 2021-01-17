@@ -5,6 +5,10 @@ $unifiTokens = json_decode($json_unifiTokens);
 
 // get smartContract from url
 $smartContract = $_GET['smartContract'];
+// Get image by data
+$blockchain = $_GET['blockchain'];
+$tokenName = strtoupper($_GET['tokenName']);
+
 
 if ($smartContract):
   foreach ($unifiTokens as $unifiToken){
@@ -34,8 +38,7 @@ if ($smartContract):
   }
 endif;
 
-$blockchain = $_GET['blockchain'];
-$tokenName = strtoupper($_GET['tokenName']);
+
 if ($blockchain):
   foreach ($unifiTokens as $unifiToken){
     if ($blockchain == $unifiToken->Blockchain){
@@ -68,3 +71,4 @@ if ($blockchain):
 endif;
   
 echo $image;
+//var_dump($BlockchainShort);
