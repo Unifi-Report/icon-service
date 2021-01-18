@@ -29,6 +29,13 @@ foreach ($unifiBinance as $binance) {
     "Blockchain" => 'Binance',
     "BlockchainShort" => 'BSC',
   );
+  $allTokenes[] = array(
+    "name" => 'u' . $binance->name . '',
+    "tokenAddress" => $binance->tokenAddress,
+    "smartContract" => $binance->contractAddress,
+    "Blockchain" => 'Binance',
+    "BlockchainShort" => 'BSC',
+  );
 }
 
 // Get unifi Icon pairs
@@ -66,13 +73,6 @@ $unifiOntology = json_decode($json_unifiOntology);
 foreach ($unifiOntology as $ontology) {
   $allTokenes[] = array(
     "name" => $ontology->name,
-    "tokenAddress" => $ontology->tokenAddress,
-    "smartContract" => $ontology->contractAddress,
-    "Blockchain" => 'Ontology',
-    "BlockchainShort" => 'ONT',
-  );
-  $allTokenes[] = array(
-    "name" => strtoupper($ontology->name),
     "tokenAddress" => $ontology->tokenAddress,
     "smartContract" => $ontology->contractAddress,
     "Blockchain" => 'Ontology',
