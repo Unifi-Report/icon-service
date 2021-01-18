@@ -38,11 +38,11 @@ if ($smartContract):
   }
 endif;
 
-
+// Search bij blockchain and token name
 if ($blockchain):
   foreach ($unifiTokens as $unifiToken){
     if ($blockchain == $unifiToken->Blockchain){
-      if ($tokenName == $unifiToken->name){
+      if ($tokenName == strtoupper($unifiToken->name)){
         $BlockchainShort = $unifiToken->BlockchainShort;
         $tokenAddress = $unifiToken->tokenAddress;
       }
@@ -71,4 +71,4 @@ if ($blockchain):
 endif;
   
 echo $image;
-//var_dump($BlockchainShort);
+var_dump($blockchain);
