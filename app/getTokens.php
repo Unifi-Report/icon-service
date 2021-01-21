@@ -50,6 +50,13 @@ foreach ($unifiIcon as $icon) {
     "Blockchain" => 'Icon',
     "BlockchainShort" => 'ICX',
   );
+  $allTokenes[] = array(
+    "name" => 'u' . $icon->name . '',
+    "tokenAddress" => $icon->tokenAddress,
+    "smartContract" => $icon->contractAddress,
+    "Blockchain" => 'Icon',
+    "BlockchainShort" => 'ICX',
+  );
 }
 
 // Get unifi Ethereum pairs
