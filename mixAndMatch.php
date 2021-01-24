@@ -9,7 +9,6 @@ $smartContract = $_GET['smartContract'];
 $blockchain = $_GET['blockchain'];
 $tokenName = strtoupper($_GET['tokenName']);
 
-
 if ($smartContract):
   foreach ($unifiTokens as $unifiToken){
     if ($smartContract == $unifiToken->smartContract){
