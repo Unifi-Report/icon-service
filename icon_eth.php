@@ -7,5 +7,4 @@ if (file_exists($filename)) {
 } else {
   $image = file_get_contents('icons/ethereum/eth.png');
 }
-
 echo $image;
