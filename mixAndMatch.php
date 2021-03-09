@@ -35,6 +35,9 @@ if ($smartContract):
   if ($BlockchainShort == 'ONT'){
     $image = file_get_contents('https://icon-service.unifi.report/icon_ont?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'IOTX'){
+    $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
+  }
 endif;
 
 // Search bij blockchain and token name
@@ -65,6 +68,9 @@ if ($blockchain):
   }
   if ($BlockchainShort == 'ONT'){
     $image = file_get_contents('https://icon-service.unifi.report/icon_ont?token=' . $tokenAddress . '');
+  }
+  if ($BlockchainShort == 'IOTX'){
+    $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
 
 endif;

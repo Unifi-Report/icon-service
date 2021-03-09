@@ -101,6 +101,20 @@ foreach ($unifiHarmony as $harmony) {
   );
 }
 
+// Get unifi Harmony pairs
+$json_unifiIotex = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/iotex');
+$unifiIotex = json_decode($json_unifiIotex);
+
+foreach ($unifiIotex as $iotex) {
+  $allTokenes[] = array(
+    "name" => $iotex->name,
+    "tokenAddress" => $iotex->tokenAddress,
+    "smartContract" => $iotex->contractAddress,
+    "Blockchain" => 'Iotex',
+    "BlockchainShort" => 'IOTX',
+  );
+}
+
 // fixes
 $allTokenes[] = array(
   "name" => 'UP',
