@@ -8,4 +8,5 @@ if (file_exists($filename)) {
   $image = file_get_contents('icons/binanceSmartChain/bnb.png');
 }
 
+
 echo $image;
