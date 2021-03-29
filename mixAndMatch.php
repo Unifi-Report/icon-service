@@ -76,4 +76,4 @@ if ($blockchain):
 endif;
   
 echo $image;
-var_dump($blockchain);
+//var_dump($blockchain);
