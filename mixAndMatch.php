@@ -74,6 +74,10 @@ if ($blockchain):
   }
 
 endif;
-  
-echo $image;
+  if ($image) {
+    echo $image;
+  }else{
+    $image = file_get_contents('http://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-Picture.png');
+    echo $image;
+  }
 //var_dump($blockchain);
