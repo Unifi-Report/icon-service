@@ -110,7 +110,25 @@ foreach ($unifiIotex as $iotex) {
     "name" => $iotex->name,
     "tokenAddress" => $iotex->tokenAddress,
     "smartContract" => $iotex->contractAddress,
-    "Blockchain" => 'Iotex',
+    "Blockchain" => 'IoTeX',
+    "BlockchainShort" => 'IOTX',
+  );
+}
+foreach ($unifiIotex as $iotex) {
+  $allTokenes[] = array(
+    "name" => $iotex->name,
+    "tokenAddress" => $iotex->tokenAddress,
+    "smartContract" => $iotex->contractAddress,
+    "Blockchain" => 'IoTeX',
+    "BlockchainShort" => 'IOTX',
+  );
+}
+foreach ($unifiIotex as $iotex) {
+  $allTokenes[] = array(
+    "name" => $iotex->name,
+    "tokenAddress" => $iotex->tokenAddress,
+    "smartContract" => $iotex->contractAddress,
+    "Blockchain" => 'ioTeX',
     "BlockchainShort" => 'IOTX',
   );
 }
