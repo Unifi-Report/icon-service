@@ -9,6 +9,9 @@ if (file_exists($filename)) {
   $tokenDataIcons = json_decode($json_tokenDataIcons);
   $tokenDataIconData = $tokenDataIcons->logoURI;
   $image = file_get_contents($tokenDataIconData);
+  if ($image){}else{
+    $image = file_get_contents('icons/binanceSmartChain/bnb.png');
+  }
 }
 
 echo $image;
