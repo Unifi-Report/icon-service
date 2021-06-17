@@ -1,5 +1,6 @@
 <?php
 $selectedToken = $_GET['token'];
+$autoResolve = $_GET['autoResolve'];
 $filename = 'icons/binanceSmartChain/' . $selectedToken . '.png';
 
 if (file_exists($filename)) {
@@ -11,7 +12,12 @@ if (file_exists($filename)) {
   $image = file_get_contents($tokenDataIconData);
   if ($image) {
   } else {
-    $image = file_get_contents('icons/binanceSmartChain/bnb.png');
+    if ($autoResolve === 'false') {
+      http_response_code(404);
+      die();
+    } else {
+      $image = file_get_contents('icons/binanceSmartChain/bnb.png');
+    }
   }
 }
 
