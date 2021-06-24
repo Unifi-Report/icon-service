@@ -21,4 +21,4 @@ if (file_exists($filename)) {
     }
   }
 }
-  echo $image;
+echo $image;
