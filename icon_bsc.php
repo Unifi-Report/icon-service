@@ -12,6 +12,10 @@ if (file_exists($filename)) {
   $image = file_get_contents($tokenDataIconData);
   if ($image) {
   } else {
+    $image = file_get_contents('https://assets.trustwalletapp.com/blockchains/smartchain/assets/' . $selectedToken . '/logo.png');
+  }
+  if ($image) {
+  } else {
     if ($autoResolve === 'false') {
       http_response_code(404);
       die();
