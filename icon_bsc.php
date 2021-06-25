@@ -15,6 +15,8 @@ if (file_exists($filename)) {
     $image = file_get_contents('https://assets.trustwalletapp.com/blockchains/smartchain/assets/' . $selectedToken . '/logo.png');
   }
   if ($image) {
+    $file = 'icons/binanceSmartChain/' . $selectedToken . '.png';
+    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
   } else {
     if ($autoResolve === 'false') {
       http_response_code(404);

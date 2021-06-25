@@ -13,6 +13,8 @@ if (file_exists($filename)) {
 
 
   if ($image) {
+    $file = 'icons/ethereum/' . $selectedToken . '.png';
+    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
   } else {
     if ($autoResolve === 'false') {
       http_response_code(404);
