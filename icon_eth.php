@@ -10,14 +10,15 @@ if (file_exists($filename)) {
   $tokenDataIcons = json_decode($json_tokenDataIcons);
   $tokenDataIconData = $tokenDataIcons->logoURI;
   $image = file_get_contents($tokenDataIconData);
+
+
   if ($image) {
-  else {
-      if ($autoResolve === 'false') {
-        http_response_code(404);
-        die();
-      } else {
-        $image = file_get_contents('icons/unknown.png');
-      }
+  } else {
+    if ($autoResolve === 'false') {
+      http_response_code(404);
+      die();
+    } else {
+      $image = file_get_contents('icons/unknown.png');
     }
   }
 }
