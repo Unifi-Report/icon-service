@@ -106,3 +106,9 @@ if ($image) {
         echo $image;
     }
 }
+
+if ($image) {
+} else {
+  $image = file_get_contents('icons/unknown.png');
+}
+echo $image;
