@@ -20,7 +20,7 @@ if (file_exists($filename)) {
       http_response_code(404);
       die();
     } else {
-      $image = file_get_contents('icons/binanceSmartChain/bnb.png');
+      $image = file_get_contents('icons/unknown.png');
     }
   }
 }

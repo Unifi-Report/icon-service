@@ -18,7 +18,7 @@ if (file_exists($filename)) {
         $image = file_get_contents($tronscanIconData[0]->icon_url);
     }
     if ($tronscanIconData[0]->icon_url === null){
-        $image = file_get_contents('icons/tron/trc10/trx.png');
+        $image = file_get_contents('icons/unknown.png');
     }
 }
 
