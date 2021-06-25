@@ -15,17 +15,83 @@
 <div class="container">
   <div class="row">
     <div class="col-12 text-center pt-3">
-      <h1>Tron token icon service</h1>
+      <h1>Token icon service</h1>
     </div>
   </div>
   <div class="row">
     <div class="col-12 py-5">
+      <h3>ETH</h3>
+      <form class="needs-validation" novalidate action="icon_eth" method="get">
+        <div class="row">
+          <div class="input-group mb-3 pt-1 col-10">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
+          </div>
+        </div>
+      </form>
+      <h3>Icon/ICX</h3>
+      <form class="needs-validation" novalidate action="icon_icx" method="get">
+        <div class="row">
+          <div class="input-group mb-3 pt-1 col-10">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
+          </div>
+        </div>
+      </form>
+      <h3>IoTeX</h3>
+      <form class="needs-validation" novalidate action="icon_iotx" method="get">
+        <div class="row">
+          <div class="input-group mb-3 pt-1 col-10">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
+          </div>
+        </div>
+      </form>
+      <h3>Ontology</h3>
+      <form class="needs-validation" novalidate action="icon_ont" method="get">
+        <div class="row">
+          <div class="input-group mb-3 pt-1 col-10">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
+          </div>
+        </div>
+      </form>
+      <h3>Harmony One</h3>
+      <form class="needs-validation" novalidate action="icon_one" method="get">
+        <div class="row">
+          <div class="input-group mb-3 pt-1 col-10">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
+          </div>
+        </div>
+      </form>
+      <h3>BSC</h3>
+      <form class="needs-validation" novalidate action="icon_bsc" method="get">
+        <div class="row">
+          <div class="input-group mb-3 pt-1 col-10">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
+          </div>
+        </div>
+      </form>
       <h3>TRC10</h3>
       <form class="needs-validation" novalidate action="icon_trc10.php" method="get">
         <div class="row">
           <div class="input-group mb-3 pt-1 col-10">
 
-            <input type="text" class="form-control" name="token" placeholder="Token ID">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
           </div>
           <div class="col-2">
             <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
