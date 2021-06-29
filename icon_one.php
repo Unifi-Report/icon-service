@@ -6,7 +6,12 @@ $filename = 'icons/harmony/' . $selectedToken . '.png';
 if (file_exists($filename)) {
   $image = file_get_contents('icons/harmony/' . $selectedToken . '.png');
 } else {
-  $image = file_get_contents('icons/unknown.png');
+  if ($autoResolve === 'false') {
+    http_response_code(404);
+    die();
+  } else {
+    $image = file_get_contents('icons/unknown.png');
+  }
 }
 
 echo $image;
