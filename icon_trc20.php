@@ -1,10 +1,7 @@
 <?php
 $selectedToken = $_GET['token'];
 
-
 $filename = 'icons/tron/trc20/' . $selectedToken . '.png';
-
-//print $tronscanIconData[0]->icon_url;
 
 if (file_exists($filename)) {
     $image = file_get_contents('icons/tron/trc20/' . $selectedToken . '.png');
