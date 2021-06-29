@@ -14,9 +14,14 @@ if (file_exists($filename)) {
     $tokenDataIcons = json_decode($json_tokenDataIcons);
     $tokenDataIconData = $tokenDataIcons->logoURI;
     $image = file_get_contents($tokenDataIconData);
-
+    if ($image) {
+    } else {
+      $image = file_get_contents('https://assets.trustwalletapp.com/blockchains/ethereum/assets/' . $selectedToken . '/logo.png');
+    }
     if ($image) {
       $file = 'icons/ethereum/' . $selectedToken . '.png';
+      file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+      $file = 'icons/ethereum/' . strtolower($selectedToken) . '.png';
       file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
     } else {
       if ($autoResolve === 'false') {
