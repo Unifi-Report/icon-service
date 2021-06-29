@@ -102,7 +102,7 @@ if ($image) {
         echo $image;
     }
     if (strtolower($blockchain) == 'iotex') {
-        $image = file_get_contents('icons/iotex/iotx.png');
+        $image = file_get_contents('icons/iotex/iotex.png');
         echo $image;
     }
 }
