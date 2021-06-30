@@ -18,6 +18,10 @@ if ($image) {
   }
 }
 if ($image) {
+  $file = 'icons/harmony/' . $selectedToken . '.png';
+  file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+  $file = 'icons/harmony/' . strtolower($selectedToken) . '.png';
+  file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
 } else {
   if ($autoResolve === 'false') {
     http_response_code(404);
