@@ -5,6 +5,19 @@ $filename = 'icons/harmony/' . $selectedToken . '.png';
 
 if (file_exists($filename)) {
   $image = file_get_contents('icons/harmony/' . $selectedToken . '.png');
+}
+
+if ($image) {
+} else {
+  $json_mochiswap = file_get_contents('https://s3-us-west-1.amazonaws.com/tokens.mochiswap.io/hashparty-default.tokenlist.json');
+  $infoMochiswapData = json_decode($json_mochiswap);
+  foreach ($infoMochiswapData->tokens as $infoMochiswap) {
+    if ($selectedToken === strtolower($infoMochiswap->address)) {
+      $image = file_get_contents($infoMochiswap->logoURI);
+    }
+  }
+}
+if ($image) {
 } else {
   if ($autoResolve === 'false') {
     http_response_code(404);
