@@ -8,7 +8,7 @@ if (file_exists($filename)) {
   $image = file_get_contents('icons/polygon/' . strtolower($selectedToken) . '.png');
   if ($image) {
   } else {
-    
+
     if ($image) {
       $file = 'icons/polygon/' . $selectedToken . '.png';
       file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
