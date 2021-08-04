@@ -16,7 +16,6 @@ if (file_exists($filename)) {
       $tokenDataIcons = json_decode($json_tokenDataIcons);
       $tokenDataIconData = $tokenDataIcons->logoURI;
       $image = file_get_contents($tokenDataIconData);
-
     }
     if ($image) {
       $file = 'icons/ethereum/' . $selectedToken . '.png';
