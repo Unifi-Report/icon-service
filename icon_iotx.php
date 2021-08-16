@@ -9,7 +9,7 @@ if (file_exists($filename)) {
   $image = file_get_contents('icons/iotex/' . strtolower($selectedToken) . '.png');
   if ($image) {
   } else {
-    $image = file_get_contents('https://raw.githubusercontent.com/iotexproject/iotex-token-metadata/master/images/' . $selectedToken . '.png');
+    $image = file_get_contents('https://api.mimo.exchange/api/token/image/' . $selectedToken . '');
 
     if ($image) {
       $file = 'icons/iotex/' . $selectedToken . '.png';
