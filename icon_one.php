@@ -6,6 +6,7 @@ $filename = 'icons/harmony/' . $selectedToken . '.png';
 if (file_exists($filename)) {
   //$image = file_get_contents('icons/harmony/' . $selectedToken . '.png');
   header('Location: icons/harmony/' . $selectedToken . '.png');
+  exit;
 
 }
 
@@ -32,6 +33,8 @@ if ($image) {
       die();
     } else {
       header('Location: icons/unknown.png');
+      exit;
+
     }
   }
 }

@@ -18,6 +18,8 @@ if (file_exists($filename)) {
   }
   if ($tronscanIconData[0]->icon_url === null) {
     header('Location: icons/unknown.png');
+    exit;
+
   }
 }
 
