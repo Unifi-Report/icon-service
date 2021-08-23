@@ -4,7 +4,9 @@ $autoResolve = $_GET['autoResolve'];
 $filename = 'icons/iotex/' . $selectedToken . '.png';
 
 if (file_exists($filename)) {
-  $image = file_get_contents('icons/iotex/' . $selectedToken . '.png');
+  //$image = file_get_contents('icons/iotex/' . $selectedToken . '.png');
+  header('Location: icons/iotex/' . $selectedToken . '.png');
+  exit;
 } else {
   $image = file_get_contents('icons/iotex/' . strtolower($selectedToken) . '.png');
   if ($image) {
@@ -21,7 +23,8 @@ if (file_exists($filename)) {
         http_response_code(404);
         die();
       } else {
-        $image = file_get_contents('icons/unknown.png');
+        header('Location: icons/unknown.png');
+        exit;
       }
     }
   }
