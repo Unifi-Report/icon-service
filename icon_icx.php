@@ -15,7 +15,9 @@ $autoResolve = $_GET['autoResolve'];
 $filename = 'icons/icon/' . $selectedToken . '.png';
 
 if (file_exists($filename)) {
-  $image = file_get_contents('icons/icon/' . $selectedToken . '.png');
+  //$image = file_get_contents('icons/icon/' . $selectedToken . '.png');
+  header('Location: icons/icon/' . $selectedToken . '.png');
+  exit;
 } else {
   $image = file_get_contents('icons/icon/' . strtolower($selectedToken) . '.png');
   if ($image) {
@@ -33,7 +35,8 @@ if (file_exists($filename)) {
         http_response_code(404);
         die();
       } else {
-        $image = file_get_contents('icons/unknown.png');
+        header('Location: icons/unknown.png');
+        exit;
       }
     }
   }

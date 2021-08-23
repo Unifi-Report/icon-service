@@ -3,9 +3,13 @@ $selectedToken = $_GET['token'];
 $filename = 'icons/polygon/' . $selectedToken . '.png';
 
 if (file_exists($filename)) {
-  $image = file_get_contents('icons/polygon/' . $selectedToken . '.png');
+  //$image = file_get_contents('icons/polygon/' . $selectedToken . '.png');
+  header('Location: icons/polygon/' . $selectedToken . '.png');
+  exit;
 } else {
   $image = file_get_contents('icons/polygon/' . strtolower($selectedToken) . '.png');
+  header('Location: icons/polygon/' . strtolower($selectedToken) . '.png');
+  exit;
   if ($image) {
   } else {
 
@@ -19,7 +23,9 @@ if (file_exists($filename)) {
         http_response_code(404);
         die();
       } else {
-        $image = file_get_contents('icons/unknown.png');
+        //$image = file_get_contents('icons/unknown.png');
+        header('Location: icons/unknown.png');
+        exit;
       }
     }
   }
