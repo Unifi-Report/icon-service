@@ -6,7 +6,8 @@ $filename = 'icons/ontology/' . $selectedToken . '.png';
 //print $tronscanIconData[0]->icon_url;
 if (file_exists($filename)) {
 
-	$image = file_get_contents('icons/ontology/' . $selectedToken . '.png');
+	//$image = file_get_contents('icons/ontology/' . $selectedToken . '.png');
+  header('Location: icons/ontology/' . $selectedToken . '.png');
 
 } else {
 
@@ -28,7 +29,7 @@ if (file_exists($filename)) {
 			if ($ExplorerIcons_oep8->msg == 'SUCCESS') {
 				$image = file_get_contents($ExplorerIcons_oep8->result->logo);
 			} else {
-				$image = file_get_contents('icons/unknown.png');
+        header('Location: icons/unknown.png');
 			}
 		}
 	}
