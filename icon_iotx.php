@@ -9,7 +9,10 @@ if (file_exists($filename)) {
   exit;
 } else {
   $image = file_get_contents('icons/iotex/' . strtolower($selectedToken) . '.png');
+
   if ($image) {
+    header('Location: icons/iotex/' . strtolower($selectedToken) . '.png');
+    exit;
   } else {
     $image = file_get_contents('https://api.mimo.exchange/api/token/image/' . $selectedToken . '');
 
@@ -18,6 +21,7 @@ if (file_exists($filename)) {
       file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
       $file = 'icons/iotex/' . strtolower($selectedToken) . '.png';
       file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+      echo $image;
     } else {
       if ($autoResolve === 'false') {
         http_response_code(404);
