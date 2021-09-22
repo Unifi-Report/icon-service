@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Get unifi Tron pairs
-$json_unifiTron = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/tron');
+$json_unifiTron = file_get_contents('https://assets.unifiprotocol.com/pools-tron.json');
 $unifiTron = json_decode($json_unifiTron);
 
 foreach ($unifiTron as $tron) {
@@ -18,7 +18,7 @@ foreach ($unifiTron as $tron) {
 }
 
 // Get unifi Binance pairs
-$json_unifiBinance = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/binance');
+$json_unifiBinance = file_get_contents('https://assets.unifiprotocol.com/pools-binance.json');
 $unifiBinance = json_decode($json_unifiBinance);
 
 foreach ($unifiBinance as $binance) {
@@ -39,7 +39,7 @@ foreach ($unifiBinance as $binance) {
 }
 
 // Get unifi Icon pairs
-$json_unifiIcon = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/icon');
+$json_unifiIcon = file_get_contents('https://assets.unifiprotocol.com/pools-icon.json');
 $unifiIcon = json_decode($json_unifiIcon);
 
 foreach ($unifiIcon as $icon) {
@@ -60,7 +60,7 @@ foreach ($unifiIcon as $icon) {
 }
 
 // Get unifi Ethereum pairs
-$json_unifiEthereum = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/ethereum');
+$json_unifiEthereum = file_get_contents('https://assets.unifiprotocol.com/pools-ethereum.json');
 $unifiEthereum = json_decode($json_unifiEthereum);
 
 foreach ($unifiEthereum as $ethereum) {
@@ -74,7 +74,7 @@ foreach ($unifiEthereum as $ethereum) {
 }
 
 // Get unifi Ontology pairs
-$json_unifiOntology = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/ontology');
+$json_unifiOntology = file_get_contents('https://assets.unifiprotocol.com/pools-ontology.json');
 $unifiOntology = json_decode($json_unifiOntology);
 
 foreach ($unifiOntology as $ontology) {
@@ -88,7 +88,7 @@ foreach ($unifiOntology as $ontology) {
 }
 
 // Get unifi Harmony pairs
-$json_unifiHarmony = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/harmony');
+$json_unifiHarmony = file_get_contents('https://assets.unifiprotocol.com/pools-harmony.json');
 $unifiHarmony = json_decode($json_unifiHarmony);
 
 foreach ($unifiHarmony as $harmony) {
@@ -102,7 +102,7 @@ foreach ($unifiHarmony as $harmony) {
 }
 
 // Get unifi Harmony pairs
-$json_unifiIotex = file_get_contents('https://tron.unifiprotocol.com/api/v1/pools/iotex');
+$json_unifiIotex = file_get_contents('https://assets.unifiprotocol.com/pools-iotex.json');
 $unifiIotex = json_decode($json_unifiIotex);
 
 foreach ($unifiIotex as $iotex) {
