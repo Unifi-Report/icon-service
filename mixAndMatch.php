@@ -38,6 +38,9 @@ if ($smartContract):
   if ($BlockchainShort == 'IOTX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'AVA') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_ava?token=' . $tokenAddress . '');
+  }
 endif;
 
 // Search bij blockchain and token name
@@ -72,6 +75,9 @@ if ($blockchain):
   if ($BlockchainShort == 'IOTX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'AVA') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_ava?token=' . $tokenAddress . '');
+  }
 
 endif;
 if ($image) {
@@ -103,6 +109,10 @@ if ($image) {
   }
   if (strtolower($blockchain) == 'iotex') {
     $image = file_get_contents('icons/iotex/iotex.png');
+    echo $image;
+  }
+  if (strtolower($blockchain) == 'avalanche') {
+    $image = file_get_contents('icons/avalanche/avalanche.png');
     echo $image;
   }
 }
