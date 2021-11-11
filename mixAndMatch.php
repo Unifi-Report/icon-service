@@ -38,8 +38,8 @@ if ($smartContract):
   if ($BlockchainShort == 'IOTX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
-  if ($BlockchainShort == 'AVA') {
-    $image = file_get_contents('https://icon-service.unifi.report/icon_ava?token=' . $tokenAddress . '');
+  if ($BlockchainShort == 'AVAX') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
 endif;
 
@@ -75,8 +75,8 @@ if ($blockchain):
   if ($BlockchainShort == 'IOTX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
-  if ($BlockchainShort == 'AVA') {
-    $image = file_get_contents('https://icon-service.unifi.report/icon_ava?token=' . $tokenAddress . '');
+  if ($BlockchainShort == 'AVAX') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
 
 endif;
