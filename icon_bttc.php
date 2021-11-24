@@ -9,11 +9,7 @@ if (file_exists($filename)) {
   $json_BTTscanIcons = file_get_contents('https://scanapi.bittorrentchain.io/api/token_trc20??contract=' . $selectedToken . '');
   $BTTscanIcons = json_decode($json_BTTscanIcons);
   $tronscanIconData = $BTTscanIcons->trc20_tokens;
-  if ($tronscanIconData[0]->icon_url == 'https://coin.top/production/upload/logo/default.png') {
-    $image = file_get_contents('https://raw.githubusercontent.com/BitGuildPlatform/dapps/master/tron/trc20/' . $selectedToken . '.png');
-  } else {
-    $image = file_get_contents($tronscanIconData[0]->icon_url);
-  }
+  
   if ($tronscanIconData[0]->icon_url === null) {
     $image = file_get_contents('icons/unknown.png');
   }
