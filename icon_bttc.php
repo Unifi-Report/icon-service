@@ -6,12 +6,14 @@ $filename = 'icons/tron/trc20/' . $selectedToken . '.png';
 if (file_exists($filename)) {
   $image = file_get_contents('icons/bitTorrentChain/' . $selectedToken . '.png');
 } else {
-  $json_BTTscanIcons = file_get_contents('https://scanapi.bittorrentchain.io/api/token_trc20??contract=' . $selectedToken . '');
+  $json_BTTscanIcons = file_get_contents('https://scanapi.bittorrentchain.io/api/token_trc20?contract=' . $selectedToken . '');
   $BTTscanIcons = json_decode($json_BTTscanIcons);
-  $tronscanIconData = $BTTscanIcons->trc20_tokens;
-  
-  if ($tronscanIconData[0]->icon_url === null) {
+  $bttcScanIconData = $BTTscanIcons->trc20_tokens;
+
+  if ($bttcScanIconData[0]->icon_url === null) {
     $image = file_get_contents('icons/unknown.png');
+  } else{
+    $image = file_get_contents($bttcScanIconData[0]->icon_url);
   }
 }
 
