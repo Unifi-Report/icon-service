@@ -75,7 +75,7 @@ if ($blockchain):
   if ($BlockchainShort == 'IOTX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
-  if ($BlockchainShort == 'AVAX') {
+  if ($BlockchainShort == 'AVAX') { 
     $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
 
