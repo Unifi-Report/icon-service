@@ -41,6 +41,9 @@ if ($smartContract):
   if ($BlockchainShort == 'AVAX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'BTTC') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_bttc?token=' . $tokenAddress . '');
+  }
 endif;
 
 // Search bij blockchain and token name
@@ -78,6 +81,9 @@ if ($blockchain):
   if ($BlockchainShort == 'AVAX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'BTTC') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_bttc?token=' . $tokenAddress . '');
+  }
 
 endif;
 if ($image) {
@@ -113,6 +119,10 @@ if ($image) {
   }
   if (strtolower($blockchain) == 'avalanche') {
     $image = file_get_contents('icons/avalanche/avalanche.png');
+    echo $image;
+  }
+  if (strtolower($blockchain) == 'bitTorrentChain') {
+    $image = file_get_contents('icons/bitTorrentChain/btt.png');
     echo $image;
   }
 }
