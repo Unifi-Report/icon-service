@@ -14,6 +14,9 @@ if (file_exists($filename)) {
     $image = file_get_contents('icons/unknown.png');
   } else{
     $image = file_get_contents($bttcScanIconData[0]->icon_url);
+    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+    $file = 'icons/bitTorrentChain/' . strtolower($selectedToken) . '.png';
+    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
   }
 }
 
