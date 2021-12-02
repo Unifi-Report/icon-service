@@ -1,7 +1,7 @@
 <?php
 $selectedToken = $_GET['token'];
 
-$filename = 'icons/tron/trc20/' . $selectedToken . '.png';
+$filename = 'icons/bitTorrentChain/' . $selectedToken . '.png';
 // https://scanapi.bittorrentchain.io/api/token_trc20?contract=0x76c6a7a3d535d015b9fef4f641a8fa1668424542&showAll=1
 if (file_exists($filename)) {
   $image = file_get_contents('icons/bitTorrentChain/' . $selectedToken . '.png');
