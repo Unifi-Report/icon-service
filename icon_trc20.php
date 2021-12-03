@@ -11,7 +11,7 @@ if (file_exists($filename)) {
 
   if ($bttcScanIconData[0]->icon_url === null) {
     $image = file_get_contents('icons/unknown.png');
-  } else{
+  } else {
     $image = file_get_contents($bttcScanIconData[0]->icon_url);
     file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
     $file = 'icons/tron/trc20/' . strtolower($selectedToken) . '.png';
