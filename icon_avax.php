@@ -12,11 +12,7 @@ if (file_exists($filename)) {
     $image = file_get_contents('https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/' . $selectedToken . '/logo.png');
     if ($image) {
     } else {
-      $json_tokenDataIcons = file_get_contents('https://token-data.unifi.report/api/getInfo?token=' . $selectedToken . '&chain=AVA');
-      $tokenDataIcons = json_decode($json_tokenDataIcons);
-      $tokenDataIconData = $tokenDataIcons->logoURI;
-      $image = file_get_contents($tokenDataIconData);
-
+      $image = file_get_contents('https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/' . $selectedToken . '/logo.png');
     }
     if ($image) {
       $file = 'icons/avalanche/' . $selectedToken . '.png';
