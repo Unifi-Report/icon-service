@@ -1,4 +1,6 @@
 <?php
+header ('Content-Type: image/png');
+
 // Get unifi Tokens pairs
 $json_unifiTokens = file_get_contents('data/tokens.json');
 $unifiTokens = json_decode($json_unifiTokens);
