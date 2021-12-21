@@ -1,5 +1,7 @@
 <?php
-ini_set('display_errors', '1');
+header ('Content-Type: image/png');
+
+//ini_set('display_errors', '1');
 
 $selectedToken = $_GET['token'];
 $filename = 'icons/tron/trc10/' . $selectedToken . '.png';

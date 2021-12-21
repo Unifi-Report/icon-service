@@ -1,4 +1,6 @@
 <?php
+header ('Content-Type: image/png');
+
 $selectedToken = $_GET['token'];
 $autoResolve = $_GET['autoResolve'];
 $filename = 'icons/ethereum/' . $selectedToken . '.png';

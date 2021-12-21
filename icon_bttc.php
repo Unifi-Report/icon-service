@@ -1,4 +1,6 @@
 <?php
+header ('Content-Type: image/png');
+
 $selectedToken = $_GET['token'];
 
 $filename = 'icons/bitTorrentChain/' . $selectedToken . '.png';

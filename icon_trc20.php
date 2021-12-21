@@ -1,4 +1,7 @@
 <?php
+header ('Content-Type: image/png');
+
+
 $selectedToken = $_GET['token'];
 
 $filename = 'icons/tron/trc20/' . $selectedToken . '.png';
