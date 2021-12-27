@@ -114,6 +114,50 @@ foreach ($unifiIotex as $iotex) {
     "BlockchainShort" => 'IOTX',
   );
 }
+
+// All uTrade v2 pairs
+$uTradeV2Data = json_decode(file_get_contents('https://data.unifi.report/api/smart-contract-balances?page_size=999'));
+foreach ($uTradeV2Data->results as $uTradeV2Datapoint) {
+  if ($uTradeV2Datapoint->blockchain === 'Binance') {
+    $blockChainShort = 'BSC';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'Ethereum') {
+    $blockChainShort = 'ETH';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'Polygon') {
+    $blockChainShort = 'MATIC';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'Harmony') {
+    $blockChainShort = 'ONE';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'IoTeX') {
+    $blockChainShort = 'IOTX';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'Tron') {
+    $blockChainShort = 'TRX';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'Icon') {
+    $blockChainShort = 'ICX';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'Ontology') {
+    $blockChainShort = 'ONT';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'BitTorrent') {
+    $blockChainShort = 'BTT';
+  }
+  if ($uTradeV2Datapoint->blockchain === 'Avalanche') {
+    $blockChainShort = 'AVAX';
+  }
+
+  $allTokenes[] = array(
+    "name" => $uTradeV2Datapoint->token_a,
+    "tokenAddress" => $uTradeV2Datapoint->token_a_address,
+    "smartContract" => $uTradeV2Datapoint->contract_address,
+    "Blockchain" => $uTradeV2Datapoint->blockchain,
+    "BlockchainShort" => $blockChainShort,
+  );
+}
+
 foreach ($unifiIotex as $iotex) {
   $allTokenes[] = array(
     "name" => $iotex->name,
