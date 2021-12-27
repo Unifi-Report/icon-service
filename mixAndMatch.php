@@ -40,6 +40,9 @@ if ($smartContract):
   if ($BlockchainShort == 'IOTX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'MATIC') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_matic?token=' . $tokenAddress . '');
+  }
   if ($BlockchainShort == 'AVAX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
@@ -77,6 +80,9 @@ if ($blockchain):
   if ($BlockchainShort == 'IOTX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_iotx?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'MATIC') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_matic?token=' . $tokenAddress . '');
+  }
   if ($BlockchainShort == 'AVAX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
@@ -86,16 +92,18 @@ if ($blockchain):
     echo $image;
   } else {
     if (strtolower($blockchain) == 'ethereum') {
-      $image = file_get_contents('icons/ethereum/eth.png');
-      echo $image;
+      $tokenDataIcons = json_decode(file_get_contents('https://token-data.unifi.report/api/getInfo?chain=ETH&tokenName=' . $tokenName . ''));
+      $tokenDataIconData = $tokenDataIcons->logoURI;
+      $image = file_get_contents($tokenDataIconData);
     }
     if (strtolower($blockchain) == 'icon') {
       $image = file_get_contents('icons/icon/icx.png');
       echo $image;
     }
     if (strtolower($blockchain) == 'binancesmartchain') {
-      $image = file_get_contents('icons/binanceSmartChain/bnb.png');
-      echo $image;
+      $tokenDataIcons = json_decode(file_get_contents('https://token-data.unifi.report/api/getInfo?chain=BSC&tokenName=' . $tokenName . ''));
+      $tokenDataIconData = $tokenDataIcons->logoURI;
+      $image = file_get_contents($tokenDataIconData);
     }
     if (strtolower($blockchain) == 'harmony') {
       $image = file_get_contents('icons/harmony/one.png');
@@ -106,8 +114,14 @@ if ($blockchain):
       echo $image;
     }
     if (strtolower($blockchain) == 'iotex') {
-      $image = file_get_contents('icons/iotex/iotex.png');
-      echo $image;
+      $tokenDataIcons = json_decode(file_get_contents('https://token-data.unifi.report/api/getInfo?chain=IOTX&tokenName=' . $tokenName . ''));
+      $tokenDataIconData = $tokenDataIcons->logoURI;
+      $image = file_get_contents($tokenDataIconData);
+    }
+    if (strtolower($blockchain) == 'polygon') {
+      $tokenDataIcons = json_decode(file_get_contents('https://token-data.unifi.report/api/getInfo?chain=MATIC&tokenName=' . $tokenName . ''));
+      $tokenDataIconData = $tokenDataIcons->logoURI;
+      $image = file_get_contents($tokenDataIconData);
     }
     if (strtolower($blockchain) == 'avalanche') {
       $tokenDataIcons = json_decode(file_get_contents('https://token-data.unifi.report/api/getInfo?chain=AVAX&tokenName=' . $tokenName . ''));
@@ -149,7 +163,11 @@ if ($image) {
     $image = file_get_contents('icons/iotex/iotex.png');
     echo $image;
   }
-  if (strtolower($blockchain) == 'avalanche') {
+  if (strtolower($blockchain) == 'iotex') {
+    $image = file_get_contents('icons/polygon/matic.png');
+    echo $image;
+  }
+  if (strtolower($blockchain) == 'polygon') {
     $image = file_get_contents('icons/avalanche/avalanche.png');
     echo $image;
   }
