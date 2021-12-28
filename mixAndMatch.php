@@ -163,11 +163,11 @@ if ($image) {
     $image = file_get_contents('icons/iotex/iotex.png');
     echo $image;
   }
-  if (strtolower($blockchain) == 'iotex') {
+  if (strtolower($blockchain) == 'polygon') {
     $image = file_get_contents('icons/polygon/matic.png');
     echo $image;
   }
-  if (strtolower($blockchain) == 'polygon') {
+  if (strtolower($blockchain) == 'avalanche') {
     $image = file_get_contents('icons/avalanche/avalanche.png');
     echo $image;
   }
