@@ -6,7 +6,7 @@ $autoResolve = $_GET['autoResolve'];
 $filename = 'icons/harmony/' . $selectedToken . '.png';
 
 if (file_exists($filename)) {
-  $image = file_get_contents('icons/harmony/' . $selectedToken . '.png');
+  $image = file_get_contents('icons/harmony/' . strtolower($selectedToken) . '.png');
 }
 
 if ($image) {
