@@ -10,7 +10,6 @@ if (file_exists($filename)) {
 }
 else {
   $image = file_get_contents('icons/harmony/' . $selectedToken . '.png');
-
 }
 
 if ($image) {
@@ -24,7 +23,7 @@ if ($image) {
   }
 
   if ($image) {
-    if (file_exists('icons/harmony/' . $selectedToken . '.png')) {}else{
+    if (file_exists('icons/harmony/' . strtolower($selectedToken) . '.png')) {}else{
       $file = 'icons/harmony/' . $selectedToken . '.png';
       file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
       $file = 'icons/harmony/' . strtolower($selectedToken) . '.png';
