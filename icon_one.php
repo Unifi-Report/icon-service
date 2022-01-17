@@ -8,6 +8,10 @@ $filename = 'icons/harmony/' . $selectedToken . '.png';
 if (file_exists($filename)) {
   $image = file_get_contents('icons/harmony/' . strtolower($selectedToken) . '.png');
 }
+else {
+  $image = file_get_contents('icons/harmony/' . $selectedToken . '.png');
+
+}
 
 if ($image) {
 } else {
