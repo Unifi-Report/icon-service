@@ -9,7 +9,7 @@ $filename = 'icons/ontology/' . $selectedToken . '.png';
 
 if (file_exists($filename)) {
   $image = file_get_contents('icons/ontology/' . $selectedToken . '.png');
-}else {
+} else {
   $image = file_get_contents('icons/ontology/' . strtolower($selectedToken) . '.png');
   if ($image) {
   } else {
@@ -42,18 +42,21 @@ if (file_exists($filename)) {
     }
   }
 }
-if ($image === false){
+if ($image === false) {
   if ($autoResolve === 'false') {
     http_response_code(404);
     die();
   } else {
     $image = file_get_contents('icons/unknown.png');
   }
-}else{
-  $file = 'icons/ontology/' . $selectedToken . '.png';
-  file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
-  $file = 'icons/ontology/' . strtolower($selectedToken) . '.png';
-  file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+} else {
+  if (file_exists($filename)) {
+  } else {
+    $file = 'icons/ontology/' . $selectedToken . '.png';
+    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+    $file = 'icons/ontology/' . strtolower($selectedToken) . '.png';
+    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+  }
 }
 header('Content-Type: image/png');
 echo($image);
