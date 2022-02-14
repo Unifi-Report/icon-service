@@ -11,8 +11,8 @@ if (file_exists($filename)) {
   $image = file_get_contents('icons/tron/trc20/' . strtolower($selectedToken) . '.png');
   if ($image) {
   } else {
-    $json_BTTscanIcons = file_get_contents('https://apilist.tronscan.org/api/token_trc20?contract=' . $selectedToken . '');
-    $TRXscanIcons = json_decode($json_BTTscanIcons);
+    $json_TRXscanIcons = file_get_contents('https://apilist.tronscan.org/api/token_trc20?contract=' . $selectedToken . '');
+    $TRXscanIcons = json_decode($json_TRXscanIcons);
     $tronScanIconData = $TRXscanIcons->trc20_tokens;
 
     if ($tronScanIconData[0]->icon_url === null) {
