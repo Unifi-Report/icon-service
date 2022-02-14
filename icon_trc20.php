@@ -1,7 +1,7 @@
 <?php
 header ('Content-Type: image/png');
 
-
+$autoResolve = $_GET['autoResolve'];
 $selectedToken = $_GET['token'];
 
 $filename = 'icons/tron/trc20/' . $selectedToken . '.png';
@@ -13,7 +13,12 @@ if (file_exists($filename)) {
   $bttcScanIconData = $BTTscanIcons->trc20_tokens;
 
   if ($bttcScanIconData[0]->icon_url === null) {
-    $image = file_get_contents('icons/unknown.png');
+    if ($autoResolve === 'false') {
+      http_response_code(404);
+      die();
+    } else {
+      $image = file_get_contents('icons/unknown.png');
+    }
   } else {
     $image = file_get_contents($bttcScanIconData[0]->icon_url);
     file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
