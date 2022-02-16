@@ -1,5 +1,5 @@
 <?php
-header ('Content-Type: image/png');
+header('Content-Type: image/png');
 
 $selectedToken = $_GET['token'];
 $autoResolve = $_GET['autoResolve'];
@@ -12,6 +12,11 @@ if (file_exists($filename)) {
   if ($image) {
   } else {
     $image = file_get_contents('https://github.com/trustwallet/assets/raw/master/blockchains/fantom/assets/' . $selectedToken . '/logo.png');
+    if ($image) {
+    } else {
+      // aad new token list with icons
+      $image = file_get_contents('https://raw.githubusercontent.com/Layer3Org/spiritswap-tokens-list-icon/master/token-list/images/' . $selectedToken . '.png');
+    }
     if ($image) {
     } else {
       $json_tokenDataIcons = file_get_contents('https://token-data.unifi.report/api/getInfo?token=' . $selectedToken . '&chain=FTM');
