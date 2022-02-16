@@ -120,6 +120,17 @@
           </div>
         </div>
       </form>
+      <h3>Fantom</h3>
+      <form class="needs-validation" novalidate action="icon_ftm" method="get">
+        <div class="row">
+          <div class="input-group mb-3 pt-1 col-10">
+            <input type="text" class="form-control" name="token" placeholder="Token Address">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-danger mt-1 w-100" type="submit">Let's go</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
