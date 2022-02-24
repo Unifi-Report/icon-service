@@ -1,5 +1,7 @@
 <?php
-
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 $selectedToken = $_GET['token'];
 $autoResolve = $_GET['autoResolve'];
@@ -50,13 +52,14 @@ if ($image === false) {
     $image = file_get_contents('icons/unknown.png');
   }
 } else {
-  if (file_exists($filename)) {
-  } else {
-    $file = 'icons/ontology/' . $selectedToken . '.png';
-    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
-    $file = 'icons/ontology/' . strtolower($selectedToken) . '.png';
-    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
-  }
+//  Local storage of new images
+//  if (file_exists($filename)) {
+//  } else {
+//    $file = 'icons/ontology/' . $selectedToken . '.png';
+//    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+//    $file = 'icons/ontology/' . strtolower($selectedToken) . '.png';
+//    file_put_contents($file, $image, FILE_APPEND | LOCK_EX);
+//  }
 }
 header('Content-Type: image/png');
 echo($image);
