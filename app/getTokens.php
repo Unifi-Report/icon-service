@@ -148,6 +148,9 @@ foreach ($uTradeV2Data->results as $uTradeV2Datapoint) {
   if ($uTradeV2Datapoint->blockchain === 'Avalanche') {
     $blockChainShort = 'AVAX';
   }
+  if ($uTradeV2Datapoint->blockchain === 'Syscoin') {
+    $blockChainShort = 'SYS';
+  }
 
   $allTokenes[] = array(
     "name" => $uTradeV2Datapoint->token_a,
