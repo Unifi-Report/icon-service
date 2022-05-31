@@ -46,6 +46,9 @@ if ($smartContract):
   if ($BlockchainShort == 'AVAX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'SYS') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_sys?token=' . $tokenAddress . '');
+  }
 endif;
 
 // Search bij blockchain and token name
@@ -86,6 +89,9 @@ if ($blockchain):
   if ($BlockchainShort == 'AVAX') {
     $image = file_get_contents('https://icon-service.unifi.report/icon_avax?token=' . $tokenAddress . '');
   }
+  if ($BlockchainShort == 'SYS') {
+    $image = file_get_contents('https://icon-service.unifi.report/icon_sys?token=' . $tokenAddress . '');
+  }
 
 // Search for correct image
   if ($image) {
@@ -125,6 +131,11 @@ if ($blockchain):
     }
     if (strtolower($blockchain) == 'avalanche') {
       $tokenDataIcons = json_decode(file_get_contents('https://token-data.unifi.report/api/getInfo?chain=AVAX&tokenName=' . $tokenName . ''));
+      $tokenDataIconData = $tokenDataIcons->logoURI;
+      $image = file_get_contents($tokenDataIconData);
+    }
+    if (strtolower($blockchain) == 'syscoin') {
+      $tokenDataIcons = json_decode(file_get_contents('https://token-data.unifi.report/api/getInfo?chain=SYS&tokenName=' . $tokenName . ''));
       $tokenDataIconData = $tokenDataIcons->logoURI;
       $image = file_get_contents($tokenDataIconData);
     }
@@ -169,6 +180,10 @@ if ($image) {
   }
   if (strtolower($blockchain) == 'avalanche') {
     $image = file_get_contents('icons/avalanche/avalanche.png');
+    echo $image;
+  }
+  if (strtolower($blockchain) == 'syscoin') {
+    $image = file_get_contents('icons/syscoin/SYS.png');
     echo $image;
   }
 }
